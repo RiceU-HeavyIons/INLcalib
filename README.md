@@ -26,13 +26,19 @@ A standard technique for statistical bin width measurement is called a code dens
 
 Given enough hits that the expected input statistics are effectively flat, and then bin value variations are a direct measure of bin width variation. Relative bin widths are read directly from the relative bin values in the code density test histogram. The following plot shows typical results of a code density test.
 
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image002.gif)
+
 The nominal or expected bin width in the code density test is just the number of hits in each bin, if each bin had the same number of hits (the total number of inputs divided by the number of bins):
-   * W(expected) = Sum(H(i))/N  with i=bin number, i={1,..,n}, and H(i)=#hits
-   * DNL(n) = (W(expected - W(n)) / W(expected)
-   * INL(n) = Sum(DNL(i))  with  i={1,...,n}
-   
+```
+ * W(expected) = Sum(H(i))/N  with i=bin number, i={1,..,n}, and H(i)=#hits
+ * DNL(n) = (W(expected - W(n)) / W(expected)
+ * INL(n) = Sum(DNL(i))  with  i={1,...,n}
+```
+
 ## Rice Setup
 All STAR TOF TDIG board are calibrated at Bonner lab, Rice University using a cable delay test setup showing as following:
+
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image006.gif)
 
 - **Pulse generator**  Generate and output signal: +3V, 60ns width, 293us period. This signal is split to two, one is connected to TCAL as input for TDIG, and two is reverted to negative and input to THUB as trigger signal.
 ** It is proved that when use 400ns width signal; we can use the same signal to input to TCAL for calibration and input to THUB as trigger, so we do not need to use a long cable (~400ns) and reverse the signal for trigger.
@@ -131,17 +137,30 @@ corr_analysis.cxx, to read in the data file and INL tables produced in last anal
 summary_analysis.cxx, to read the cable delay test results and produce summary plots.
 The following plot is the results of inl_analysis.cxx
 
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image008.gif)
+
 The above plots show all the INL tables for 24 channels in 3 TDCs of one TDIG board.
 The code corr_analysis.cxx will produce the cable delay test result between any two channels of the same TDC. So each TDC will have 28 plots to check the results and the time resolution as following:
 
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image010.gif)
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image012.gif)
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image014.gif)
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image016.gif)
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image018.gif)
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image020.gif)
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image022.gif)
+
+
 The code summary_analysis.cxx will produce the summary plots for all TDC channel in one TDIG board like following:
 
+![Image](http://macfrank.rice.edu/STAR/BTOF/TDIG-calib-howto_files/image024.gif)
+
 ## Support material
-[High Performance Time to Digital Converter - Manual v2.2 for HPTDC v1.3](http://macfrank.rice.edu/STAR/BTOF/documents/hptdc_manual_ver2.2.pdf)
-[TCPU Rev C Engineering and User's Manual - version 6.0a](http://macfrank.rice.edu/STAR/BTOF/documents/TCPU_Engineering_Manual_Ver6_0a.pdf)
-[TOF CANbus High Level Protocol (HLP) - version 3l](http://macfrank.rice.edu/STAR/BTOF/documents/TDIG_CANbus_HLP_v1_5.pdf)
-[TDIG Rev F Engineering and User's Manual - version 4.0a](http://macfrank.rice.edu/STAR/BTOF/documents/TDIG_Engineering_Manual_rev_4_0a.pdf)
-[TOF Fiber Data Format - version 2.4](http://macfrank.rice.edu/STAR/BTOF/documents/TOF_Fiber_Data_Format_v2_4.pdf)
-[PCAN-driver for Linux - version 6.9 by Peak System Technik GmbH](http://macfrank.rice.edu/STAR/BTOF/documents/Installation-en_ab6.9.pdf)
+- [High Performance Time to Digital Converter - Manual v2.2 for HPTDC v1.3](http://macfrank.rice.edu/STAR/BTOF/documents/hptdc_manual_ver2.2.pdf)
+- [TCPU Rev C Engineering and User's Manual - version 6.0a](http://macfrank.rice.edu/STAR/BTOF/documents/TCPU_Engineering_Manual_Ver6_0a.pdf)
+- [TOF CANbus High Level Protocol (HLP) - version 3l](http://macfrank.rice.edu/STAR/BTOF/documents/TDIG_CANbus_HLP_v1_5.pdf)
+- [TDIG Rev F Engineering and User's Manual - version 4.0a](http://macfrank.rice.edu/STAR/BTOF/documents/TDIG_Engineering_Manual_rev_4_0a.pdf)
+- [TOF Fiber Data Format - version 2.4](http://macfrank.rice.edu/STAR/BTOF/documents/TOF_Fiber_Data_Format_v2_4.pdf)
+- [PCAN-driver for Linux - version 6.9 by Peak System Technik GmbH](http://macfrank.rice.edu/STAR/BTOF/documents/Installation-en_ab6.9.pdf)
 
 
