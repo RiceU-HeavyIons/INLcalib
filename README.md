@@ -1,5 +1,6 @@
-# INLcalib
-STAR's INL Calibrations for the TDIG electronics
+# Integrated Non-Linear Calibrations for the STAR TDIG Electronics
+---
+
 
 # How to calibrate TDIG boards?
 
