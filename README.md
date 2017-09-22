@@ -125,8 +125,7 @@ Sometimes, we need to take data with TPMD and PMT with only several channels and
 Normally there are several ways to change the configuration file.
 - Modify the firmware source code, which required compile and re-build the firmware.
 A typical configuration file looks like: [http://www.bonner.rice.edu/~liuj/TDIG-calib-howto/bitConfig.txt](http://www.bonner.rice.edu/~liuj/TDIG-calib-howto/bitConfig.txt)
-- Modify the configuration file directly by MS-Excel and save it, and then read configuration file by Can-Bus to TDIG/TCPU. The configuration file looks like:
-[http://www.bonner.rice.edu/~liuj/TDIG-calib-howto/HPTDC JTAG configurator LWB defaults MAY10 2007.xls](http://www.bonner.rice.edu/~liuj/TDIG-calib-howto/HPTDC JTAG configurator LWB defaults MAY10 2007.xls).
+- Modify the configuration file directly by MS-Excel and save it, and then read configuration file by Can-Bus to TDIG/TCPU. The configuration file looks like: [http://www.bonner.rice.edu/~liuj/TDIG-calib-howto/HPTDC JTAG configurator LWB defaults MAY10 2007.xls](http://www.bonner.rice.edu/~liuj/TDIG-calib-howto/HPTDC_JTAG_configurator_LWB_defaults_MAY10_2007.xls).
 - Use a python code to modify configuration file then read into TDIG/TCPU.
 
 ## Data Analysis.
