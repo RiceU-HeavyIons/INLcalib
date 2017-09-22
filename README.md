@@ -85,7 +85,6 @@ Then you can go to terminal x2, and type the following commands line by line (st
 ./pc "m s 0x404 1 0x91"                   #check the serdes connection
 ./pc "m s 0x402 2 0x80 0x3"               #turn on trigger
 ```
-``` 
 Sometimes, you need to type:
 ```
 ./pc "m s 0x202 5 0xe 0xe 0x10 0xe 0x0"   #reset tcpu
@@ -115,7 +114,7 @@ Go to x-terminal x3, and go to directory:
 The data taken will be in process, the data will be saved at `/data/rawdata/`, after finish 6000000 pulses (normally about half an hour if you run pulse of 283us period), the data taken will stop automatically. To check if the data is reasonable during or after the data taken, you can go to x-terminal x4, and type: `od -t x4 filename` to check. The data are saved in binary and you can see all the separators and timestamps, as well as geographical words, trigger words depends on the configuration.
 
 ## Run setup with different configuration.
-Sometimes, we need to take data with TPMD and PMT with only several channels and with both trailing edge and leading edge data. Special configuration file are necessary, to learn how to make a configuration, a lot of manual needs to be read. It is not part of the TDIG calibration, so I wonÔøΩt include the detail instructions here.
+Sometimes, we need to take data with TPMD and PMT with only several channels and with both trailing edge and leading edge data. Special configuration file are necessary, to learn how to make a configuration, a lot of manual needs to be read. It is not part of the TDIG calibration, so I will not include the detail instructions here.
 
 Normally there are several ways to change the configuration file.
 - Modify the firmware source code, which required compile and re-build the firmware.
